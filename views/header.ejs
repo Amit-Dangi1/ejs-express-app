@@ -1,0 +1,102 @@
+<!-- 
+
+<nav class="navbar navbar-expand-sm bg-dark  text-white fixed-top  ">
+  <div class="container-fluid ">
+    <a class="navbar-brand" href="javascript:void(0)">TCC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="mynavbar">
+      <ul class="navbar-nav me-auto ">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+    
+         <li class="nav-item">
+          <a class="nav-link" href="/">Contact Us</a>
+        </li>
+    
+  
+        <%if(!isLoggedIn){%>    
+        <li class="nav-item">
+          <a class="nav-link" href="/sign-in">SignIn</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/sign-up">SignUp</a>
+        </li>
+    <%} else {%>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/signout">LogOut</a>
+        </li>
+    <%}%>
+      </ul>
+      
+    </div>
+  </div>
+</nav> -->
+<div>
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top "style="background-color: #e3f2fd;">
+    <a class="navbar-brand mx-5" href="/"><img class="logo" src="https://media.istockphoto.com/id/1174902712/photo/love-horoscope-zodiac-sign-astrology-for-foretell-and-fortune-telling-education-study-course.jpg?b=1&s=612x612&w=0&k=20&c=bJ87wIIkW0VQF-hiqERF7hx-GfpgcY3N92P385cI8YA="> <span class="logoname">Bookvaani</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item  ">
+          <a class="nav-link font1" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font1" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font1" href="/contact">Contact Us</a>
+        </li>
+        <%if(!isLoggedIn){%>
+          <li class="nav-item">
+            <a class="nav-link font2 btn-primary text-white rounded w-100 text-center" href="/sign-in"><b>SignIn</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font2 btn-info text-white rounded w-100 text-center" href="/sign-up"><b>SignUp</b></a>
+          </li>
+        <%} else {%>
+          <li class="nav-item">
+            <a class="nav-link font2 btn btn-info w-100 text-white text-center" href="/user/signout"><b>LogOut</b></a>
+          </li>
+        <%}%>
+      </ul>
+    </div>
+  </nav>
+
+
+<style>
+  .navbar-nav {
+    gap: 20px; /* Equal gap between items */
+  }
+  .font1{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  
+ 
+  .logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .logoname{
+    font-family: cursive;
+    color: purple;
+    font-size: 25px;
+    font-weight: 900;
+
+  }
+</style>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+        <%- include("Boot.ejs") %>
+
+    
+</head>
+<body>
+    
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <div class="shadow-lg pt-5 pb-5 px-5 rounded ">
+               
+                    <form action="/user/signin" method="post">
+                        <h1 class="lead mb-3">Sign In</h1>
+                        <!-- <input type="text" class="form-control" name="name" id="" placeholder="Enter Name" required><br> -->
+                        <input type="email" class="form-control" name="email" id="" placeholder="Enter Email" required><br>
+                         <input type="password" class="form-control" name="password" id="" placeholder="Enter Password" required><br>
+
+                           <div class="mt-2">
+             <button class="btn btn-secondary" style="width:100%">Submit</button>
+             <p class="mt-2">Create Account <b><a href="/sign-up">SignUp</a></b></p>
+
+
+      </div>
+                    </form>
+
+                </div>
+        </div>
+
+
+
+</body>
+</html>

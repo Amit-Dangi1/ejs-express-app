@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View_More</title>
+    <%- include("Boot.ejs")%>
+</head>
+<body>
+    <%-include("header.ejs")%>
+  <% if(isLoggedIn){%>
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="w-100 h-100" src="<%= product.thumbnail%>" alt="img" srcset="">
+            </div>
+
+            <div class="col-md-7">
+                <p class="text-danger display-4"><b><%= product.title%></b></p>
+                <p class="">By : <b class="text-primary lead"><%= product.author%></b> (Author)</p>
+                <p class="">Category : <b><%= product.category%></b></p>
+                <p class=" ">Rating : <b><%= product.rating%></b>/5</p>
+                <p class=""><b class="text-success"><%= product.price%> $</b></p>
+                <p class="">Return Policy : <b><%= product.returnPolicy%></b></p>
+                <p class="text-secondary ">Description : <%= product.description%></p>
+                <hr>
+                <p>
+                    <ul class="list-unstyled  d-flex gap-5">
+                        <li class="lead">Premium Quality</li>
+                        <li class="lead">Easy Return</li>
+                        <li class="lead">Certified Product</li>
+                        <li class="lead">Money back Guarantee</li>
+                        <li class="lead">On time delivery</li>
+                    </ul>
+                </p>
+                      <a class="btn btn-info w-75" href="/product/buy/<%=product.id %>">Buy</a>
+
+            </div>
+     
+            <div class="col-md-2 ">
+                <a class="btn border bg-light w-100" href="">Add to Cart</a>
+                <a class="btn btn-warning mt-2 w-100" href="">Add to Wishlist</a>
+            </div>
+        </div>
+    </div>
+    <%} else {%>
+         <div>Login first</div>
+    <%}%>
+    
+</body>
+</html>

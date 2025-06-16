@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+<!-- jQuery library -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+<!-- Latest compiled JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+ 
+
+
+     <%- include("Boot.ejs") %>
+     <style>
+  .back1{
+    background-image: url("https://img.freepik.com/free-photo/fantastic-background-with-orange-flower-books_23-2147606878.jpg?ga=GA1.1.286932510.1704466478&semt=ais_items_boosted&w=740");
+    width: 100%;
+    height: 450px;
+
+  }
+  .bg_color{
+    color: royalblue;
+  }
+  .future{
+    background-color: rgba(0, 0, 0, 0.393);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .card-customize{
+    border: 1px solid silver;
+    border-radius: 25px;
+  }
+  .card-customize:hover{
+    box-shadow: 5px 4px 9px 7px #17a3b832;
+    transition-duration: 1s;
+  }
+  /* .img-custom:hover{ 
+
+
+  } */
+    
+  .iceimg{
+    height: 200px;
+    border: 1px solid silver;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+ .iceimg:hover{
+    transform: scale(1.1);
+    transition-duration: 0.8s;
+ } 
+
+
+
+  .iceimg1{
+    border: 1px solid silver;
+    margin: 10px;
+    border-radius: 10px;
+    width: 90px;
+
+
+  }
+  .icelink{
+    text-decoration: none;
+    color: darkblue;
+  }
+  .icebackcolor{
+    background-image: linear-gradient(to left,blue,#47BFB6);
+  }
+  .video1{
+    width: 100%;
+}
+.emoji{
+    height: 70px;
+}
+.emoji:hover{
+    transition-duration: 0.5s;
+    transform: scale(.8);
+}
+ </style>
+</head>
+<body>
+    <%-include("header.ejs")%>
+    <div class="back1  d-flex justify-content-center align-items-center">
+  <h1 class="future p-3 rounded text-white ">"Future Bright, Dreams Alight"<br>
+"Shaping a Radiant Future"</h1>
+</div>
+<div class=""><img class="w-100" src="https://www.bookswagon.com/images/promotionimages/web/2_CuratedWeb1505.jpg"></div>
+<div class="container mt-5">
+    <div class="row">
+<%for(let data of alldata){%>
+    <div class="col-md-3 p-4 ">
+        <div class="h-100 d-flex pb-1 justify-content-center flex-column align-items-center  card-customize border  "> 
+            <!-- style="box-shadow: 10px 10px 10px grey;" -->
+  <img  src="<%= data.thumbnail%>" class="h-50 w-50 img-custom"  alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= data.title%></h5>
+    <p class="card-title lead"><%= data.author%></p>
+    <p class="card-text text-danger"><b><%= data.price%></b> $.</p>
+    <hr>
+    <a href="/product/<%=data.id %>" class="btn btn-info">Go Somewhere</a>
+  </div>
+  </div>
+</div> 
+<%}%>
+</div>
+</div>
+          
+ <!-- Slider Start -->
+
+ <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.bookswagon.com/bannerimages/79_inr.jpg?v=5.1" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.bookswagon.com/bannerimages/89_inr.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.bookswagon.com/bannerimages/81_inr.jpg?v=5.1" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- Slider End -->
+ 
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+<div class="col-md-6 col-sm-12"><video  autoplay loop unmuted width="100%" height="100%" controls>
+  <source src="https://videos.pexels.com/video-files/2268807/2268807-sd_640_360_24fps.mp4" type="video/mp4">
+  </video></div>
+
+  <div class="col-md-6 col-sm-12 mt-5 text-center lead video1">
+    "Embrace each dawn with hope, for within its golden rays lie the promise of new beginnings. Let optimism guide your steps, illuminating the path toward boundless opportunities. With a heart full of gratitude and a mind brimming with possibilities, journey forth and paint the canvas of tomorrow with joyous hues." 
+  <p class="mt-5"><img class="emoji" src="https://cdn-icons-png.freepik.com/256/166/166516.png?ga=GA1.2.286932510.1704466478&"> <img class="emoji" src="https://cdn-icons-png.freepik.com/256/3175/3175232.png?ga=GA1.1.286932510.1704466478&semt=ais_hybrid"></p><hr></div>  
+
+</div></div>
+<div class="container-fluid icebackcolor">
+<div class="container mt-5"><h1 class="text-center pt-3 text-white">"Discover the Truth, Embrace the Knowledge."</h1>
+
+<marquee class="mt-3"><a href=""><img class="iceimg" src="https://bookbins.in/wp-content/uploads/2024/04/Icebreaker-Hannah-Grace-Buy-Online-Bookbins-300x300.jpg"></a> <a href=""> <img class="iceimg" src="https://bookbins.in/wp-content/uploads/2024/04/The-Ballad-Of-Never-After-Stephanie-Garber-Buy-Online-Bookbins-300x300.jpg"></a>
+         <a href=""><img class="iceimg" src="https://bookbins.in/wp-content/uploads/2024/04/Legendary-Stephanie-Garber-Buy-Online-Bookbins-300x300.jpg"></a> <a href=""><img class="iceimg" src="https://bookbins.in/wp-content/uploads/2024/04/When-The-Body-Says-No-Gabor-Mate-Buy-Online-Bookbins-300x300.jpg"></a>
+
+         <a href="https://bookbins.in/wp-content/uploads/2024/04/Your-Next-Five-Moves-Patrick-Bet-David-Buy-Online-Bookbins-300x300.jpg"><img class="iceimg" src="https://bookbins.in/wp-content/uploads/2024/04/The-Little-Book-That-Beats-The-Market-Joel-Greenblatt-Buy-Online-Bookbins-300x300.jpg"></a> <a href=""> <img class="iceimg" src=""></a>
+         <a href=""><img class="iceimg" src="https://bookbins.in/wp-content/uploads/2024/04/Make-Epic-Money-Ankur-Warikoo-Buy-Online-Bookbins-300x300.jpg"></a> <a href=""><img class="iceimg" src="https://bookbins.in/wp-content/uploads/2024/05/Atomic-Habits-James-Clear-Buy-Online-Bookbins-1-300x300.jpg"></a>
+
+</marquee>
+
+</div></div>
+ 
+
+
+    <!-- <h1 class="text-dark">Amit Sir Jii</h1> -->
+    <%- include("footer.ejs") %>
+ 
+</body>
+</html>

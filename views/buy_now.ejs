@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+    <%- include("Boot.ejs") %>
+    <style>
+        .backimg{
+            background-color: rgba(0, 0, 0, 0.616);
+        }
+        .backimg2{
+            background-image:url("https://img.freepik.com/free-photo/fantastic-background-with-orange-flower-books_23-2147606878.jpg?ga=GA1.1.286932510.1704466478&semt=ais_items_boosted&w=740");
+            height: auto;
+            background-size: cover;
+            background-position: center;
+
+        }
+    </style>
+
+</head>
+<body>
+    <%-include("header.ejs")%>
+    <div class="backimg2 pt-5 pb-3 mt-5">
+    <div class="container  pt-3 rounded  backimg">
+        <h1 class=" display-4  mb-2  text-white pt-2 pb-3 text-center">Order Details</h1>
+
+        <div class=" row   justify-content-around   px-5  rounded pb-5" >
+           
+            <div class="col-md-6 border bg-light     p-3 rounded">
+                  
+                               <form action="/product/order" method="post">
+                                  <p class="lead border pt-1 pb-1 px-2 rounded"><b>Name</b> : <%= currentuser.name%></p>
+                                  <p class="lead border pt-1 pb-1 px-2 rounded"><b>Email</b> : <%= currentuser.email%></p> 
+                                  <p class="lead border pt-2 pb-2 px-2 rounded"><b>Contact No.</b> : <%= currentuser.contact%></p> 
+                                  <p class="lead border pt-2 pb-2 px-2 rounded"><b>Address. </b>: Jetpura</p> 
+                                  <p class="lead border pt-2 pb-2 px-2 rounded"><b>Book Title </b>: <%= product.title%></p> 
+                                  <p class="lead text-success border pt-2 pb-2 px-2 rounded"  ><b>Total Amount. </b>: <b  name="total_amount"><%= product.price %>$</b></p> 
+                                  <p class="lead border pt-2 pb-2 px-2 rounded"><b>Shipping </b>: <%= product.shipping%></p> 
+                                  <!-- <a href="btn btn-info" class="w-100">Place Order</a> -->
+                                   <input class="btn btn-info w-100" type="submit" value="Place Order"> </form>
+            </div>
+                        <div class="col-md-3"><img class="h-100 w-100" src="<%=product.thumbnail%> " alt="__image"></div>
+
+           
+        </div>
+    </div>
+ </div>
+</body>
+</html>
+

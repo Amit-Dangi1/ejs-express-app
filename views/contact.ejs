@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        .backimg1{
+     background-image: url("https://img.freepik.com/free-vector/blue-white-gradient-abstract-background_53876-60241.jpg?ga=GA1.1.286932510.1704466478&semt=ais_hybrid&w=740");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+        }
+        .contactback{
+             
+            
+            border-radius: 10px;
+        }
+        .input1{
+            border: none;
+            outline: none;
+            border-bottom: 2px solid silver;
+
+        }
+        .backimg2{
+            background-image: url("https://img.freepik.com/free-photo/natural-composition-with-flowers-book_23-2147624824.jpg?ga=GA1.1.286932510.1704466478&semt=ais_items_boosted&w=740");
+            background-size: cover;
+            width: 100%;
+            height: auto;
+
+        }
+        .backcolor2{
+            background-color: rgba(0, 0, 0, 0.441);
+            width: 100%;
+            height: auto;
+        }
+        .addressicon{
+            height: 50px;
+        }
+    </style>
+    <%- include("Boot.ejs") %>
+
+</head>
+<body>
+    <%-include("header.ejs")%>
+     <div class="col-md-12 col-sm-12 ">
+        <img class="w-100" src="https://img.freepik.com/free-photo/old-books-shelf-background-with-never-stop-dreaming-quote_53876-132278.jpg?ga=GA1.1.286932510.1704466478&semt=ais_items_boosted&w=740">
+        <!-- <h1 class="me-auto text-center text-white">"Fueling Your Future"<br>
+"Dream Big, Achieve Bigger"</h1> -->
+    </div>
+
+    <div class="container mt-5">
+   <div class="text-center"><p class="text-center"><h1 class="display-4 lead">Get in touch</h1></p>
+   <p class="lead">We love to hear all the positives, but more importantly all the critical feedback that helps us improve & grow</p>
+   <h1 class="text-info lead">REACH US HERE</h1>
+   <p>(Mon-Sat, 10:30am-6pm)</p>
+   <p class="lead">Please allow 24-48 hours to us to revert back</p></div>
+    </div>
+
+
+    <div class="container-fluid mt-5 backimg2  ">
+        <div class="container-fluid backcolor2 pt-5 pb-5">
+        <div class="container ">
+ <div class="row">
+
+    <div class="col-md-6 col-sm-12 pt-5 flex-column">
+        <p class="text-white " > 
+        <br><img class="addressicon" src="https://cdn-icons-png.freepik.com/256/16138/16138430.png?ga=GA1.1.286932510.1704466478&semt=ais_incoming"> :
+        09,Brij Nayani Colony,<br>Limbodi,Indore(MP)
+        </p>
+        
+        <p class="text-white mt-5"> 
+        <br>
+         <img class="addressicon" src="https://cdn-icons-png.freepik.com/256/3626/3626147.png?ga=GA1.1.286932510.1704466478&semt=ais_incoming" alt=""> : 6266981951
+        </p>
+
+        
+        <p class="text-white mt-5"> 
+        <br>
+         <img class="addressicon" src="https://cdn-icons-png.freepik.com/256/6716/6716666.png?ga=GA1.1.286932510.1704466478&semt=ais_incoming" alt=""> <b class="text-white"> : bookvaani@gmail.com</b>
+        </p>
+    </div>
+
+
+   <div class="col-md-6 col-sm-12 bg-white contactback  d-flex  p-5 flex-column">
+   <form action="/user/contact" method="post">
+    <label class="mt-4" for=""><b>Name : </b></label>
+    <input class="w-100 p3  input1" type="text" name="name" placeholder="Enter Name" required><br>
+
+    <label class="mt-4" for=""><b>Email : </b></label>
+    <input class="w-100 p3   input1" type="email" name="email" placeholder="Enter email" required><br>
+    <label class="mt-4" for=""><b>Message : </b></label>
+    <textarea  class="w-100   input1" name="feedback" id="" placeholder="Enter Message" required></textarea><br>
+    <button class="btn btn-info w-50 text-center mt-4 p-3"><b>Send</b></button>
+   </form> 
+   </div>   
+</div>
+</div>
+</div>
+</div>
+    <%- include("footer.ejs") %>
+
+</body>
+</html>

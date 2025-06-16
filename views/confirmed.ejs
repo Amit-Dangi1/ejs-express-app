@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Order Success</title>
+
+<%- include("Boot.ejs") %>
+
+<!-- Fonts & Custom Styles -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .success-container {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 450px;
+  }
+
+  .success-icon {
+    font-size: 4rem;
+    color: #27ae60;
+    margin-bottom: 1rem;
+  }
+
+  .success-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .success-message {
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  .order-summary {
+    background: #ecf0f1;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .order-summary p {
+    margin: 0.3rem 0;
+  }
+
+  .home-btn {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+  }
+
+  .home-btn:hover {
+    background: #219150;
+  }
+</style>
+</head>
+<body>
+
+<div class="success-container">
+  <div class="success-icon"></div>
+  <h1 class="success-title">Order Placed!</h1>
+  <h3 class="text-danger">Payment(COD)</h3>
+  <p class="success-message">Thank you for your purchase. Your order has been successfully placed and will be processed shortly.</p>
+
+ 
+
+  <a href="/" class="btn btn-success text-white">Back to Home</a>
+</div>
+
+</body>
+</html>
